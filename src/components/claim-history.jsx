@@ -11,7 +11,7 @@ export function ClaimHistory() {
         setHistory([]); // Reset before fetch
         setError(null); // Clear previous error
 
-        axios.get(`http://127.0.0.1:3030/history/${params.id}`)
+        axios.get(`https://leaderboard-1bon.onrender.com/history/${params.id}`)
             .then(response => {
                 console.log("History response:", response.data);
 
@@ -30,7 +30,6 @@ export function ClaimHistory() {
 
     return (
         <div>
-            {/* Title Header */}
             <div style={{
                 margin: '40px 100px 20px 100px',
                 textAlign: 'center',
@@ -42,7 +41,6 @@ export function ClaimHistory() {
                 <h3>Claim History</h3>
             </div>
 
-            {/* Table Section */}
             <div style={{ margin: '0 100px' }}>
                 <table border="1" style={{ width: '100%', textAlign: 'center', borderCollapse: 'collapse' }}>
                     <thead>

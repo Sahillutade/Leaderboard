@@ -10,7 +10,7 @@ export function UserSelector()
     let navigate = useNavigate();
 
     function handleUsers(){
-        axios.get(`http://127.0.0.1:3030/user-list`)
+        axios.get(`https://leaderboard-1bon.onrender.com/user-list`)
         .then(response => {
             setUsers(response.data);
         });
@@ -21,7 +21,7 @@ export function UserSelector()
     }
 
     function handleClaim(u){
-        axios.post(`http://127.0.0.1:3030/claim/${u}`);
+        axios.post(`https://leaderboard-1bon.onrender.com/claim/${u}`);
         alert(`Points have been credited to you!`);
     }
 

@@ -7,7 +7,7 @@ export function LeaderBoard(){
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:3030/leaderboard")
+        axios.get("https://leaderboard-1bon.onrender.com/leaderboard")
             .then(response => {
                 console.log("Leaderboard response:", response.data);
                 setUsers(response.data);

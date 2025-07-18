@@ -32,7 +32,7 @@ export function AddMember()
         },
         onSubmit: async (values, { resetForm }) => {
             try {
-                const res = await axios.post('http://127.0.0.1:3030/users', values);
+                const res = await axios.post('https://leaderboard-1bon.onrender.com/users', values);
                 console.log('User added:', res.data);
                 setMessage('Member added successfully!');
                 resetForm();
